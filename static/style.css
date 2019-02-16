@@ -1,0 +1,212 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Abel', sans-serif;
+}
+h1{
+  font-family: 'Amatic SC', cursive;
+  font-size: 4em;
+  color: black;
+  text-align: center;
+} 
+h2{
+  font-family: 'Amatic SC', cursive;
+  font-size: 3em;
+}
+h4{
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.6em;
+}
+#images, #content{
+width: 50%;
+float: left;
+overflow: hidden;
+color: black;
+}
+ul{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+#content >ul{
+  background-color: whitesmoke;
+}
+#content>ul>li, #images>ul>li{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: translateX(100%);
+  transition: translate 0.9s;
+  padding: 25px;
+}
+a {
+    color: #3c6382;
+}
+#content>ul> li.is-selected, #images>ul> li.is-selected{
+  position: absolute;
+  transform: translateX(0);
+  transition: all 0.9s;
+}
+#content>ul>li.is-selected {
+    overflow: auto;
+}
+#content>ul> li.move-left, #images>ul> li.move-left{
+  transform: translateX(-100%);
+    transition: all 0.9s;
+}
+#content>ul> li.move-right, #images>ul> li.move-right{
+  transform: translateX(100%);
+    transition: all 0.9s;
+}
+#images >ul>li:nth-child(1){
+  background: url(/static/pictures/algerian_couple_wedding_EFE5D4.png) no-repeat center;
+  background-size: cover;
+  text-align: center;
+}
+#images >ul>li:nth-child(1) > p{
+    display: inline-block;
+    margin-bottom: 0;
+}
+#images >ul>li:nth-child(2){
+  background: url(/static/pictures/jardin_d_essai_cadre.png) no-repeat center;
+  background-size: cover;
+  /* text-align: center; */
+}
+article{
+    width: 80%;
+    margin: 2% auto; 
+    text-align: center;
+    position: sticky;
+}
+#wedding{
+    height: 200px;
+}
+#day1{
+    height: 200px;
+}
+#day2{
+    height: 200px;
+}
+#bottom-info{
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+#bottom-info-disk{
+    height: 100px;
+    position: absolute;
+    bottom: 25px;
+    margin-top: 2em;
+    text-align: center;
+    width: 100%;
+}
+#algiers{
+    height: 600px
+}
+#registry{
+    height: 150px;
+}
+article > h2{
+    text-align: center;
+    margin-bottom: 2px;
+}
+article > p{
+    margin-top: 8px;
+}
+nav{
+  width: 50%;
+  min-height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+.menu{
+  flex-grow: 1;
+  width: 33.33%;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  display: flex;
+}
+.menu>h3{
+  margin: auto;
+}
+.menu:hover{
+  background-color: rgba(0,0,0,0.7);
+}
+/*#content > ul > li > article:nth-child(2){
+    margin-top: 5%;
+}*/
+.activities{
+    display: flex;
+}
+.activity-faceA{
+    width: 50%;
+    text-align: right;
+    margin: 10px;
+    padding: -10;
+}
+.activity-faceB{
+    width: 50%;
+    text-align: left;
+    margin: 10px;
+}
+.heightGone-faceA{
+    height: inherit;
+    text-align: right;
+}
+.heightGone-faceA > li{
+    margin-top: 10px;
+}
+.heightGone-faceA > li:nth-child(1){
+    margin-top: inherit;
+}
+.heightGone-faceB{
+    height: inherit;
+    text-align: left;
+}
+.heightGone-faceB > li{
+    margin-top: 10px;
+}
+.heightGone-faceB > li:nth-child(1){
+    margin-top: inherit;
+}
+#poll{
+    margin-top: 25px;
+    width: 100%;
+}
+#nameInput, #messageInput{
+    width: 40%;
+}
+#transport{
+    width: 5%;
+}
+.attendance{
+    color: green;
+    opacity: 0;
+    display: inline-block;
+}
+.attAnim{
+    animation: att 5s;
+}
+.language{
+    display: none;
+}
+#switch{
+    right: 0;
+    cursor: pointer;
+    text-decoration: underline;
+}
+@keyframes att{
+    30%{
+        opacity: 1;
+    };
+    100%{
+        opacity: 0;
+    };
+}
