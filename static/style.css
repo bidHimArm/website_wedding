@@ -210,3 +210,11 @@ nav{
         opacity: 0;
     };
 }
+audio{ 
+    width: 500px; 
+    display: block;
+    position: relative;
+    align-content: center;  
+}
+
+
